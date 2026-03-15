@@ -1,0 +1,108 @@
+@use '../abstracts/' as *;
+@use '../base/' as *;
+
+.nav {
+	@include flex(row, nowrap, space-between, center);
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+
+	@include tablet {
+		display: none;
+	}
+
+	&--small {
+		display: none;
+
+		@include tablet {
+			@include flex(row, nowrap, space-between, center);
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 10;
+		}
+	}
+
+	&__logo {
+		position: absolute;
+		left: 50%;
+		width: 60px;
+
+		&--small-menu {
+			position: relative;
+			left: 0;
+			z-index: 20;
+		}
+	}
+
+	&__left,
+	&__right {
+		@include flex(row, nowrap, space-between, center, 2rem);
+
+		a {
+			color: $white;
+
+			&:hover {
+				text-decoration: underline;
+				text-underline-offset: 5px;
+			}
+		}
+	}
+
+	&__btn {
+		border: 0;
+		cursor: pointer;
+		padding: 0;
+		position: relative;
+		z-index: 20;
+	}
+
+	&__hidden {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: $background-blue;
+		height: 100dvh;
+		width: 100%;
+		z-index: 15;
+
+		&.open {
+			display: block;
+		}
+
+		ul {
+			margin-top: 150px;
+		}
+	}
+
+	&__links {
+		font-size: $links;
+		color: $white;
+		display: inline-block;
+		margin-bottom: 2rem;
+	}
+}
+
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideOut {
+	from {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+}

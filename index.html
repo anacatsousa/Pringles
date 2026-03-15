@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Pringles animated slider" />
+		<link rel="stylesheet" href="./scss/style.css" />
+		<script src="./js/script.js" defer></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<title>Pringles</title>
+	</head>
+	<body>
+		<header>
+			<nav class="nav p-y p-x m-y" aria-label="Principal navbar">
+				<ul class="nav__left">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Promoções</a></li>
+					<li><a href="#">Produts</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+				<img src="./assets/logo.png" alt="Pringles logo" class="nav__logo" />
+				<ul class="nav__right">
+					<li>
+						<a href="#"><img src="./assets/lupa.svg" alt="search icon" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="./assets/usuario.svg" alt="user icon" /></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="nav nav--small p-y p-x m-y" aria-label="Small devices navbar" aria-hidden="true">
+				<img src="./assets/logo.png" alt="Pringles logo" class="nav__logo nav__logo--small-menu" />
+				<button class="nav__btn" aria-label="menu button">
+					<img src="./assets/menu.svg" alt="menu icon" />
+				</button>
+				<div class="nav__hidden p-y p-x">
+					<ul>
+						<li><a href="#" class="nav__links">Home</a></li>
+						<li><a href="#" class="nav__links">Promoções</a></li>
+						<li><a href="#" class="nav__links">Produts</a></li>
+						<li><a href="#" class="nav__links">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<section class="sliders">
+				<div class="sliders__container p-y p-x active">
+					<div class="sliders__left">
+						<h1>Salt e Vinegar</h1>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, commodi, optio quos inventore veritatis atque tempore voluptatibus accusamus dolorum harum perferendis</p>
+						<button class="sliders__btn" aria-label="Go to store button">View in store</button>
+						<div class="sliders__dots">
+							<button aria-label="Go to first slide button" class="sliders__dot active"></button>
+							<button aria-label="Go to second slide button" class="sliders__dot"></button>
+							<button aria-label="Go to third slide button" class="sliders__dot"></button>
+							<button aria-label="Go to fourth slide button" class="sliders__dot"></button>
+						</div>
+					</div>
+					<div class="sliders__right">
+						<img src="./assets/azul.webp" alt="Pringles Salt e Vinegar" class="sliders__img" />
+						<button class="sliders__btn--next" aria-label="Next slide">
+							<img src="./assets/rosa.webp" alt="Pringles Ham & Cheese" class="sliders__img--next" />
+						</button>
+					</div>
+					<img src="./assets/pringlesFundo.svg" alt="Pringles logo background" class="sliders__background" />
+				</div>
+				<div class="sliders__container p-y p-x">
+					<div class="sliders__left">
+						<h1>Ham & Cheese</h1>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, commodi, optio quos inventore veritatis atque tempore voluptatibus accusamus dolorum harum perferendis</p>
+						<button class="sliders__btn" aria-label="Go to store button">View in store</button>
+						<div class="sliders__dots">
+							<button aria-label="Go to first  slide button" class="sliders__dot"></button>
+							<button aria-label="Go to second slide button" class="sliders__dot active"></button>
+							<button aria-label="Go to third slide button" class="sliders__dot"></button>
+							<button aria-label="Go to fourth slide button" class="sliders__dot"></button>
+						</div>
+					</div>
+					<div class="sliders__right">
+						<img src="./assets/rosa.webp" alt="Pringles Ham & Cheese" class="sliders__img" />
+						<button class="sliders__btn--next" aria-label="Next slide">
+							<img src="./assets/laranja.webp" alt="Pringles Paprika" class="sliders__img--next" />
+						</button>
+					</div>
+					<img src="./assets/pringlesFundo.svg" alt="Pringles logo background" class="sliders__background" />
+				</div>
+				<div class="sliders__container p-y p-x">
+					<div class="sliders__left">
+						<h1>Paprika</h1>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, commodi, optio quos inventore veritatis atque tempore voluptatibus accusamus dolorum harum perferendis</p>
+						<button class="sliders__btn" aria-label="Go to store button">View in store</button>
+						<div class="sliders__dots">
+							<button aria-label="Go to first  slide button" class="sliders__dot"></button>
+							<button aria-label="Go to second slide button" class="sliders__dot"></button>
+							<button aria-label="Go to third slide button" class="sliders__dot active"></button>
+							<button aria-label="Go to fourth slide button" class="sliders__dot"></button>
+						</div>
+					</div>
+					<div class="sliders__right">
+						<img src="./assets/laranja.webp" alt="Pringles Paprika" class="sliders__img" />
+						<button class="sliders__btn--next" aria-label="Next slide">
+							<img src="./assets/verde.webp" alt="Pringles Cheese & Onion" class="sliders__img--next" />
+						</button>
+					</div>
+					<img src="./assets/pringlesFundo.svg" alt="Pringles logo background" class="sliders__background" />
+				</div>
+				<div class="sliders__container p-y p-x">
+					<div class="sliders__left">
+						<h1>Cheese & Onion</h1>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, commodi, optio quos inventore veritatis atque tempore voluptatibus accusamus dolorum harum perferendis</p>
+						<button class="sliders__btn" aria-label="Go to store button">View in store</button>
+						<div class="sliders__dots">
+							<button aria-label="Go to first slide button" class="sliders__dot"></button>
+							<button aria-label="Go to second slide button" class="sliders__dot"></button>
+							<button aria-label="Go to third slide button" class="sliders__dot"></button>
+							<button aria-label="Go to fourth slide button" class="sliders__dot active"></button>
+						</div>
+					</div>
+					<div class="sliders__right">
+						<img src="./assets/verde.webp" alt="Pringles Cheese & Onion" class="sliders__img" />
+						<button class="sliders__btn--next" aria-label="Next slide">
+							<img src="./assets/azul.webp" alt="Pringles Salt e Vinegar" class="sliders__img--next" />
+						</button>
+					</div>
+					<img src="./assets/pringlesFundo.svg" alt="Pringles logo background" class="sliders__background" />
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

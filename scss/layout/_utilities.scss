@@ -1,0 +1,82 @@
+@use '../abstracts/' as *;
+
+$spacing: (
+	x: (
+		desktop: 80px,
+		tablet: 50px,
+		mobile: 20px,
+	),
+	y: (
+		desktop: 30px,
+		tablet: 30px,
+		mobile: 15px,
+	),
+);
+
+@each $space, $screen in $spacing {
+	/* PADDING */
+	.p-#{$space} {
+		@if $space == 'x' {
+			padding-left: map-get($screen, desktop);
+			padding-right: map-get($screen, desktop);
+
+			@include tablet {
+				padding-left: map-get($screen, tablet);
+				padding-right: map-get($screen, tablet);
+			}
+
+			@include mobile {
+				padding-left: map-get($screen, mobile);
+				padding-right: map-get($screen, mobile);
+			}
+		}
+
+		@if $space == 'y' {
+			padding-top: map-get($screen, desktop);
+			padding-bottom: map-get($screen, desktop);
+
+			@include tablet {
+				padding-top: map-get($screen, tablet);
+				padding-bottom: map-get($screen, tablet);
+			}
+
+			@include mobile {
+				padding-top: map-get($screen, mobile);
+				padding-bottom: map-get($screen, mobile);
+			}
+		}
+	}
+
+	/* MARGIN */
+	.m-#{$space} {
+		@if $space == 'x' {
+			margin-left: map-get($screen, desktop);
+			margin-right: map-get($screen, desktop);
+
+			@include tablet {
+				margin-left: map-get($screen, tablet);
+				margin-right: map-get($screen, tablet);
+			}
+
+			@include mobile {
+				margin-left: map-get($screen, mobile);
+				margin-right: map-get($screen, mobile);
+			}
+		}
+
+		@if $space == 'y' {
+			margin-top: map-get($screen, desktop);
+			margin-bottom: map-get($screen, desktop);
+
+			@include tablet {
+				margin-top: map-get($screen, tablet);
+				margin-bottom: map-get($screen, tablet);
+			}
+
+			@include mobile {
+				margin-top: map-get($screen, mobile);
+				margin-bottom: map-get($screen, mobile);
+			}
+		}
+	}
+}

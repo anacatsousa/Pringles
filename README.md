@@ -10,7 +10,6 @@ A fictional promotional website for the Pringles brand, built with HTML, SCSS an
 ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-
 <br>
 
 ## About
@@ -27,9 +26,9 @@ The page is a single-page layout with the following sections: hero slider with p
 - Interactive product slider with clip-path reveal animation
 - Dot navigation synced with slides
 - Animated full-screen mobile menu
-- Clean, accessible HTML structure
 - Custom styling without external frameworks
 - Modular SCSS styling with BEM methodology
+- Built with accessibility in mind (keyboard navigation, ARIA attributes, and screen reader support)
 
 <br>
 
@@ -40,11 +39,12 @@ Pringles/
 ├── assets/          # Images and visual resources
 ├── js/              # JavaScript source files
 │   └── script.js
-├── scss/            # SCSS source files 
+├── scss/            # SCSS source files
 ├── index.html       # Main HTML file
 ├── .gitignore
 └── README.md
 ```
+
 <br>
 
 ## Getting Started
@@ -81,6 +81,5 @@ sass scss/main.scss assets/style.css --watch
 This project is licensed under the [MIT License](LICENSE).
 
 <br>
-
 
 Made by [Catarina Sousa](https://github.com/anacatsousa)

@@ -37,7 +37,7 @@ function nextSlide(i, trigger, dotIndex) {
 	current.classList.add('visited');
 	current.setAttribute('inert', '');
 
-	// Foca no mesmo tipo de elemento no novo slide
+	// Keep focus on the same element in the next slide Foca no mesmo tipo de elemento no novo slide
 	if (trigger === 'next') {
 		next.querySelector('.sliders__btn--next').focus();
 	} else if (trigger === 'dot') {

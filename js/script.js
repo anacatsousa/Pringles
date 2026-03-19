@@ -5,8 +5,6 @@ const menu = document.querySelector('.nav__hidden');
 const navSmall = document.querySelector('.nav--small');
 
 btn.addEventListener('click', () => {
-	//menu.classList.toggle('open');
-
 	if (menu.classList.contains('open')) {
 		menu.style.animation = 'slideOut 0.5s ease';
 
@@ -26,7 +24,7 @@ btn.addEventListener('click', () => {
 
 const slides = document.querySelectorAll('.sliders__container');
 
-function nextSlide(i) {
+function nextSlide(i, trigger, dotIndex) {
 	const current = document.querySelector('.sliders__container.active');
 	const next = slides[i % slides.length];
 
@@ -34,8 +32,17 @@ function nextSlide(i) {
 
 	next.classList.remove('visited', 'reset');
 	next.classList.add('active');
+	next.removeAttribute('inert');
 	current.classList.remove('active');
 	current.classList.add('visited');
+	current.setAttribute('inert', '');
+
+	// Foca no mesmo tipo de elemento no novo slide
+	if (trigger === 'next') {
+		next.querySelector('.sliders__btn--next').focus();
+	} else if (trigger === 'dot') {
+		next.querySelectorAll('.sliders__dot')[dotIndex].focus();
+	}
 
 	setTimeout(() => {
 		current.classList.remove('visited');
@@ -44,11 +51,11 @@ function nextSlide(i) {
 }
 
 slides.forEach((slide, index) => {
-	const nextImg = slide.querySelector('.sliders__btn--next');
-	nextImg.addEventListener('click', () => nextSlide(index + 1));
+	const nextBtn = slide.querySelector('.sliders__btn--next');
+	nextBtn.addEventListener('click', () => nextSlide(index + 1, 'next'));
 
 	const dots = slide.querySelectorAll('.sliders__dot');
 	dots.forEach((dot, dotIndex) => {
-		dot.addEventListener('click', () => nextSlide(dotIndex));
+		dot.addEventListener('click', () => nextSlide(dotIndex, 'dot', dotIndex));
 	});
 });
